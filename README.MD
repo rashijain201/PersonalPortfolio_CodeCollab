@@ -1,5 +1,3 @@
----
-
 # 🌐 Modern Developer Portfolio 🚀
 
 A fully customizable and modern developer portfolio built with **React.js**, **Tailwind CSS**, and **TanStack Router** — designed collaboratively as a base template and extended uniquely by each contributor.
@@ -45,5 +43,3 @@ npm run dev
 ### 4. Open in browser
 
 Visit `http://localhost:5173` to see the project running.
-
-```
