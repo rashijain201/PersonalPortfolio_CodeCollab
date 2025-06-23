@@ -12,10 +12,10 @@ This project aims to help each student build and deploy a personal portfolio web
 
 ## 🧠 Tech Stack
 
-* **React.js** – Component-based UI
-* **Tailwind CSS** – Utility-first styling
-* **TanStack Router** – Lightweight, modern routing
-* **Vercel** – Fast deployment
+-   **React.js** – Component-based UI
+-   **Tailwind CSS** – Utility-first styling
+-   **TanStack Router** – Lightweight, modern routing
+-   **Vercel** – Fast deployment
 
 ---
 
@@ -37,7 +37,7 @@ npm install
 ### 3. Start the development server
 
 ```bash
-npm run dev
+npm start
 ```
 
 ### 4. Open in browser
