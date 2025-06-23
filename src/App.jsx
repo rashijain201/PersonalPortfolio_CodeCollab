@@ -1,17 +1,8 @@
-import './App.css'
+import { RouterProvider } from "@tanstack/react-router";
+import { router } from "./Router";
 
 function App() {
-  return (
-    <div className="min-h-screen bg-red-500 flex items-center justify-center">
-      <p className="text-white text-3xl font-bold">
-        Tailwind is working!
-      </p>
-    </div>
-  );
+	return <RouterProvider router={router} />;
 }
 
 export default App;
-
-
-
-
