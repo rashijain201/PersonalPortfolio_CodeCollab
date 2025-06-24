@@ -1,15 +1,15 @@
-import { Outlet } from "@tanstack/react-router";
-import Navbar from "./pages/navbar";
-import Footer from "./pages/footer";
+import { Outlet } from '@tanstack/react-router'
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
-function RootLayout() {
-	return (
-		<div>
-			<Navbar />
-			<Outlet />
-			<Footer />
-		</div>
-	);
+export default function RootLayout() {
+  return (
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <main className="flex-grow">
+        <Outlet />
+      </main>
+      <Footer />
+    </div>
+  )
 }
-
-export default RootLayout;
