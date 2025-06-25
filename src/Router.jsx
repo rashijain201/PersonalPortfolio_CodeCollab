@@ -1,25 +1,27 @@
-import { RouterProvider, createBrowserRouter } from '@tanstack/react-router';
-import RootLayout from './RootLayout';
-import Home from './pages/home';
-import About from './pages/about';
-import Projects from './pages/projects';
-import Contact from './pages/contact';
-import NotFound from './pages/not-found';
+import { createRootRoute, createRoute, createRouter, RouterProvider } from '@tanstack/react-router'
+import { lazy } from 'react'
+import RootLayout from './RootLayout'
+import Home from './pages/home'
+import About from './pages/about'
+import Projects from './pages/projects'
+import Contact from './pages/contact'
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <RootLayout />,
-    children: [
-      { index: true, element: <Home /> },
-      { path: 'about', element: <About /> },
-      { path: 'projects', element: <Projects /> },
-      { path: 'contact', element: <Contact /> },
-      { path: '*', element: <NotFound /> },
-    ],
-  },
-]);
+const rootRoute = createRootRoute({ component: RootLayout })
+
+const homeRoute = createRoute({ path: '/', getParentRoute: () => rootRoute, component: Home })
+const aboutRoute = createRoute({ path: '/about', getParentRoute: () => rootRoute, component: About })
+const projectsRoute = createRoute({ path: '/projects', getParentRoute: () => rootRoute, component: Projects })
+const contactRoute = createRoute({ path: '/contact', getParentRoute: () => rootRoute, component: Contact })
+
+const routeTree = rootRoute.addChildren([
+  homeRoute,
+  aboutRoute,
+  projectsRoute,
+  contactRoute,
+])
+
+const router = createRouter({ routeTree })
 
 export default function Router() {
-  return <RouterProvider router={router} />;
+  return <RouterProvider router={router} />
 }
