@@ -16,6 +16,8 @@ const Home = () => {
             />
             <GridLayout
                 title_1="My First Project"
+                description_1="This is a short description of the project."
+                description_2="This is another short description of a different project."
                 title_2="My Second Project"
             />
         </div>
