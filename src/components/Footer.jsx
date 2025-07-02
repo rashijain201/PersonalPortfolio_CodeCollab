@@ -1,5 +1,5 @@
 function Footer() {
-	return <div style={{ width: "100%" }}>Footer</div>;
+	return <div className="bg-gray-800 text-white p-4">Footer</div>;
 }
 
 export default Footer;
