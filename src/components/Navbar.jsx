@@ -66,7 +66,7 @@ export default function Navbar() {
 					</button>
 				</div>
 
-				<div className="hidden md:flex gap-6 justify-center">
+				<div className="hidden md:flex gap-12 justify-left items-center">
 					<Link to="/">Home</Link>
 					<Link to="/about">About</Link>
 					<Link to="/projects">Projects</Link>
@@ -75,7 +75,7 @@ export default function Navbar() {
 			</nav>
 
 			{/* Spacer to prevent content from being hidden behind the navbar */}
-			<div className="h-[60px] md:h-[56px] bg-green-500" />
+			<div className="h-[60px] md:h-[56px]" />
 		</>
 	);
 }
