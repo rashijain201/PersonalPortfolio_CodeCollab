@@ -60,7 +60,7 @@ export default function Navbar() {
 				}`}
 			>
 				<div className="flex items-center justify-between md:hidden">
-					<h1 className="text-xl font-semibold">My Site</h1>
+					<h1 className="text-xl font-semibold">Portfolio</h1>
 					<button onClick={() => setIsOpen(!isOpen)}>
 						{isOpen ? <X size={28} /> : <Menu size={28} />}
 					</button>
