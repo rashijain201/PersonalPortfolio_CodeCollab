@@ -46,7 +46,7 @@ Visit `http://localhost:5173` to see the project running.
 
 ---
 
-## 🍴 Forking Instructions
+## ↩️ Forking Instructions
 
 ### 1. Click the **Fork** button in the top-right corner of this repository to create a copy under your GitHub account.
 
