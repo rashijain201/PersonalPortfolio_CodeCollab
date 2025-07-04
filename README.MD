@@ -19,7 +19,7 @@ This project aims to help each student build and deploy a personal portfolio web
 
 ---
 
-## 🚀 Getting Started
+## 🌱 Getting Started
 
 ### 1. Clone the repository
 
