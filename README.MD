@@ -43,3 +43,55 @@ npm start
 ### 4. Open in browser
 
 Visit `http://localhost:5173` to see the project running.
+
+---
+
+## 🍴 Forking Instructions
+
+### 1. Click the **Fork** button in the top-right corner of this repository to create a copy under your GitHub account.
+
+### 2. Clone your forked repository
+
+```bash
+git clone https://github.com/<your-username>/PersonalPortfolio_codecollab.git 
+cd PersonalPortfolio_codecollab
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
+
+```bash
+npm start
+```
+
+### 5. Open in browser
+
+Visit `http://localhost:5173` to view the project locally.
+
+---
+
+## 🚀 Deployment Instructions (Vercel)
+
+### One-time Setup
+
+1. Access [https://vercel.com](https://vercel.com) via your GitHub account and click **“Add New Project”**.
+3. Choose your forked GitHub repository from the list to import it into Vercel.
+
+### Configuration
+
+When prompted:
+
+- **Framework Preset**: `Vite`
+- **Build Command**: `npm run build`
+- **Output Directory**: `dist`
+- The rest of the settings remain default.
+
+### Deployment
+
+1. Click the **Deploy** button.
+2. Once Vercel is done building the project, the site will be live at a unique Vercel URL.
