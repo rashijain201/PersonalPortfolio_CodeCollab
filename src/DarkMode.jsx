@@ -19,14 +19,9 @@ export default function DarkMode() {
   return (
     <button
       onClick={() => setIsDark(!isDark)}
-      // 👇 Here’s where the className goes:
-      className="text-3xl p-2 rounded-full border-2 border-red-500"
+      className="text-4xl p-2 bg-yellow-300 rounded-full border border-black"
     >
       {isDark ? '🔌' : '💡'}
     </button>
   );
 }
-
-
-
-
