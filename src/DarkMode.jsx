@@ -19,13 +19,14 @@ export default function DarkMode() {
   return (
     <button
       onClick={() => setIsDark(!isDark)}
-      className="text-2xl p-2 rounded-full transition-transform hover:scale-110 bg-gray-100 dark:bg-gray-800"
-      aria-label="Toggle dark mode"
+      // 👇 Here’s where the className goes:
+      className="text-3xl p-2 rounded-full border-2 border-red-500"
     >
       {isDark ? '🔌' : '💡'}
     </button>
   );
 }
+
 
 
 
