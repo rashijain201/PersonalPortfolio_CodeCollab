@@ -1,6 +1,8 @@
-import { useEffect, useState } from 'react';
+// This file defines and exports the component
+import { useState, useEffect } from 'react';
+import { Lightbulb, LightbulbOff } from 'lucide-react';
 
-export default function DarkModeToggle() {
+export default function DarkMode() {
   const [isDark, setIsDark] = useState(() => {
     return localStorage.getItem('theme') === 'dark';
   });
@@ -19,9 +21,11 @@ export default function DarkModeToggle() {
   return (
     <button
       onClick={() => setIsDark(!isDark)}
-      className="p-2 rounded bg-gray-200 dark:bg-gray-800 dark:text-white"
+      className="p-2 rounded-full bg-yellow-200 dark:bg-gray-700 text-yellow-700 dark:text-yellow-300 hover:scale-105 transition-transform"
     >
-      Toggle {isDark ? 'Light' : 'Dark'} Mode
+      {isDark ? <LightbulbOff size={24} /> : <Lightbulb size={24} />}
     </button>
   );
 }
+
+
