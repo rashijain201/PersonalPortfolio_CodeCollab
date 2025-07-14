@@ -1,6 +1,4 @@
-// This file defines and exports the component
 import { useState, useEffect } from 'react';
-import { Lightbulb, LightbulbOff } from 'lucide-react';
 
 export default function DarkMode() {
   const [isDark, setIsDark] = useState(() => {
@@ -21,11 +19,13 @@ export default function DarkMode() {
   return (
     <button
       onClick={() => setIsDark(!isDark)}
-      className="p-2 rounded-full bg-yellow-200 dark:bg-gray-700 text-yellow-700 dark:text-yellow-300 hover:scale-105 transition-transform"
+      className="text-2xl p-2 rounded-full transition-transform hover:scale-110 bg-gray-100 dark:bg-gray-800"
+      aria-label="Toggle dark mode"
     >
-      {isDark ? <LightbulbOff size={24} /> : <Lightbulb size={24} />}
+      {isDark ? '🔌' : '💡'}
     </button>
   );
 }
+
 
 
