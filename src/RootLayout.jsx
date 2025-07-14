@@ -8,7 +8,7 @@ export default function RootLayout() {
 		<div className="flex flex-col min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors">
 			<header className="flex justify-between items-center p-4">
 				<Navbar />
-				<DarkModeToggle />
+				<DarkMode />
 			</header>
 
 			<main className="flex-grow flex">
