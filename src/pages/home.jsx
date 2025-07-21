@@ -7,6 +7,8 @@ import {
 import Chatbot from "../components/Chatbot";
 import { useSearch, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import ParticlesBackground from "../components/ParticlesBackground";
+
 
 const Home = () => {
     var { isTouring } = useSearch({ from: "/" });
@@ -32,6 +34,7 @@ const Home = () => {
     }, [isTouring, navigate]);
     return (
         <>
+            <ParticlesBackground />
             {isTouring && (
                 <div className="absolute top-[10px] w-[80%] left-1/2 transform -translate-x-1/2 bg-purple-300 text-black px-4 py-2 rounded shadow z-50 text-center">
                     <p className="font-semibold">
