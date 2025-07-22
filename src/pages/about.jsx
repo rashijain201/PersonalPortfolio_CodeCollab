@@ -10,12 +10,10 @@ function About() {
     useEffect(() => {
         if (!isTouring) return;
 
-        // Countdown timer
         const countdown = setInterval(() => {
             setSecondsLeft((prev) => prev - 1);
         }, 1000);
 
-        // Redirect after 3 seconds
         const redirect = setTimeout(() => {
             navigate({
                 to: "/projects",
@@ -23,7 +21,6 @@ function About() {
             });
         }, 3000);
 
-        // Cleanup
         return () => {
             clearInterval(countdown);
             clearTimeout(redirect);
@@ -31,9 +28,9 @@ function About() {
     }, [isTouring, navigate]);
 
     return (
-        <div className="relative flex-grow bg-green-500 flex flex-col items-center justify-center text-center px-6">
+        <div className="relative flex-grow bg-green-500 dark:bg-green-700 flex flex-col items-center justify-center text-center px-6">
             {isTouring && (
-                <div className="absolute top-[10px] w-[80%] left-1/2 transform -translate-x-1/2 bg-yellow-300 text-black px-4 py-2 rounded shadow z-50">
+                <div className="absolute top-[10px] w-[80%] left-1/2 transform -translate-x-1/2 bg-yellow-300 dark:bg-yellow-500 text-black dark:text-gray-900 px-4 py-2 rounded shadow z-50">
                     So, about me — I love coding and creating innovative
                     solutions. I also enjoy collaborating with others. Let's
                     explore my projects next!
@@ -42,10 +39,10 @@ function About() {
                 </div>
             )}
             <div>
-                <h1 className="text-white text-5xl font-bold mb-4">
+                <h1 className="text-white dark:text-gray-100 text-5xl font-bold mb-4">
                     About This Project
                 </h1>
-                <p className="text-white text-lg max-w-2xl mx-auto">
+                <p className="text-white dark:text-gray-200 text-lg max-w-2xl mx-auto">
                     This portfolio template was created by CodeCollab, the tech
                     club at UMass Amherst, to help students build and showcase
                     their work using modern frontend tools. It is fully

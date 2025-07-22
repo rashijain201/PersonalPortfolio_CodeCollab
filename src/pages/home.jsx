@@ -43,7 +43,6 @@ const Home = () => {
                     </p>
                 </div>
             )}
-
             <div className="p-8 space-y-6 text-center justify-center items-center flex-grow align-middle bg-gray-150">
                 <SectionHeading text="Welcome to the UMass CodeCollab Portfolio" />
                 <SubHeading text="A collaborative student project to showcase resumes, projects, and creative skills!" />
