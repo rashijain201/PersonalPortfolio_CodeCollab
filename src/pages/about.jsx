@@ -1,5 +1,6 @@
 import { useSearch, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import config from "../config";
 
 function About() {
     const { isTouring } = useSearch({ from: "/about" });
@@ -28,9 +29,9 @@ function About() {
     }, [isTouring, navigate]);
 
     return (
-        <div className="relative flex-grow bg-green-500 dark:bg-green-700 flex flex-col items-center justify-center text-center px-6">
+        <div className="relative flex-grow flex flex-col items-center justify-center text-center px-6">
             {isTouring && (
-                <div className="absolute top-[10px] w-[80%] left-1/2 transform -translate-x-1/2 bg-yellow-300 dark:bg-yellow-500 text-black dark:text-gray-900 px-4 py-2 rounded shadow z-50">
+                <div className="absolute top-[10px] w-[80%] left-1/2 transform -translate-x-1/2 bg-yellow-300 dark:bg-yellow-500 text-black dark:text-white px-4 py-2 rounded shadow z-50">
                     So, about me — I love coding and creating innovative
                     solutions. I also enjoy collaborating with others. Let's
                     explore my projects next!
@@ -39,15 +40,11 @@ function About() {
                 </div>
             )}
             <div>
-                <h1 className="text-white dark:text-gray-100 text-5xl font-bold mb-4">
-                    About This Project
+                <h1 className="text-black dark:text-white text-5xl font-bold mb-4">
+                    {config.about.heading}
                 </h1>
-                <p className="text-white dark:text-gray-200 text-lg max-w-2xl mx-auto">
-                    This portfolio template was created by CodeCollab, the tech
-                    club at UMass Amherst, to help students build and showcase
-                    their work using modern frontend tools. It is fully
-                    customizable and open-source, allowing anyone to personalize
-                    it for internships, job hunts, or creative portfolios.
+                <p className="text-black dark:text-white text-lg max-w-2xl mx-auto">
+                    {config.about.description}
                 </p>
             </div>
         </div>

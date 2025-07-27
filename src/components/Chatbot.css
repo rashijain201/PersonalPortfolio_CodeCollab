@@ -1,11 +1,17 @@
 .chatbot-container {
     position: fixed;
+    width: max-content;
+    height: max-content;
     bottom: 20px;
     right: 20px;
     z-index: 1000;
 }
 
 .chatbot-toggle {
+    position: absolute;
+    bottom: 85%;
+    right: 10px;
+    z-index: 100;
     background-color: #2b2b2b;
     color: white;
     border: none;
@@ -13,6 +19,12 @@
     padding: 12px;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: top 0.3s ease;
+}
+
+.active {
+    bottom: 0% !important;
+    transition: all 0.3s ease;
 }
 
 .chatbot-box {
@@ -24,6 +36,8 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    transform: translateY(0) scale(1);
+    transition: transform 0.3s ease, scale 0.5s ease;
 }
 
 .chatbot-messages {
@@ -32,6 +46,11 @@
     display: flex;
     padding: 10px;
     overflow-y: auto;
+}
+
+.closed {
+    transform: translateY(100%) scale(0);
+    transition: transform 0.3s ease, scale 0.5s ease;
 }
 
 .chatbot-msg {

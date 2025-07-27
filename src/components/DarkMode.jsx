@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
+import config from "../config";
 
 const DarkMode = () => {
     const [isDark, setIsDark] = useState(() => {
@@ -11,9 +12,14 @@ const DarkMode = () => {
         if (isDark) {
             root.classList.add("dark");
             localStorage.setItem("theme", "dark");
+            const meta = document.querySelector('meta[name="theme-color"]');
+            if (meta) meta.setAttribute("content", config.theme.backgroundDark);
         } else {
             root.classList.remove("dark");
             localStorage.setItem("theme", "light");
+            const meta = document.querySelector('meta[name="theme-color"]');
+            if (meta)
+                meta.setAttribute("content", config.theme.backgroundLight);
         }
     }, [isDark]);
 

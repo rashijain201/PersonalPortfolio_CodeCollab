@@ -11,7 +11,25 @@ const Chatbot = () => {
     ]);
     const [input, setInput] = useState("");
 
-    const toggleChat = () => setIsOpen(!isOpen);
+    const toggleChat = () => {
+        setIsOpen(!isOpen);
+        const el = document.querySelector(".chatbot-box");
+        if (el) {
+            el.classList.toggle("closed");
+        }
+        const btn = document.querySelector(".chatbot-toggle");
+        btn.classList.toggle("active");
+        const container = document.querySelector(".chatbot-container");
+        if (isOpen) {
+        setTimeout(() => {
+            container.style.width = "50px";
+            container.style.height = "50px";
+        }, 500)
+    } else {
+            container.style.width = "400px";
+            container.style.height = "400px";
+    }
+    }
 
     const sendMessage = async () => {
         if (input.trim() === "") return;
@@ -62,21 +80,19 @@ const Chatbot = () => {
                                 to: "/about",
                                 search: { isTouring: true },
                             });
-                        }, 300);
+                        }, 1000);
                     }, 1000);
                 }, 1000);
             }, 1000);
-        }, 300);
+        }, 1000);
     }
 
     return (
-        <div className="chatbot-container">
-            <button className="chatbot-toggle" onClick={toggleChat}>
+        <div className="chatbot-container text-black chatbot-container-closed">
+            <button className="chatbot-toggle active" onClick={toggleChat}>
                 <FaRobot size={24} />
             </button>
-
-            {isOpen && (
-                <div className="chatbot-box">
+                <div className="chatbot-box closed">
                     <div className="chatbot-messages">
                         {messages.map((msg, index) => (
                             <div
@@ -102,7 +118,6 @@ const Chatbot = () => {
                         <button onClick={sendMessage}>Send</button>
                     </div>
                 </div>
-            )}
         </div>
     );
 };

@@ -44,6 +44,10 @@ npm start
 
 Visit `http://localhost:5173` to see the project running.
 
+### 5. Customize your Content
+
+Update `src/config.js` to personalize page headings, descriptions and the site title. All text on the Home, About, Projects and Contact pages pulls from this configuration file so you can quickly adapt the template for your own portfolio.
+
 ---
 
 ## ↩️ Forking Instructions
