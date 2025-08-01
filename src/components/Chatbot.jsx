@@ -1,15 +1,15 @@
-import { useState } from "react";
 import { FaRobot } from "react-icons/fa";
-import { useNavigate } from "@tanstack/react-router";
+import { useState } from "react";
 import "./Chatbot.css";
 
 const Chatbot = () => {
-    const navigate = useNavigate();
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState([
         { sender: "bot", text: "Hi! How can I help you today?" },
     ]);
     const [input, setInput] = useState("");
+    const [isTouring, setIsTouring] = useState(false);
+    const [tourText, setTourText] = useState("");
 
     const toggleChat = () => {
         setIsOpen(!isOpen);
@@ -21,15 +21,15 @@ const Chatbot = () => {
         btn.classList.toggle("active");
         const container = document.querySelector(".chatbot-container");
         if (isOpen) {
-        setTimeout(() => {
-            container.style.width = "50px";
-            container.style.height = "50px";
-        }, 500)
-    } else {
+            setTimeout(() => {
+                container.style.width = "50px";
+                container.style.height = "50px";
+            }, 500);
+        } else {
             container.style.width = "400px";
             container.style.height = "400px";
-    }
-    }
+        }
+    };
 
     const sendMessage = async () => {
         if (input.trim() === "") return;
@@ -56,6 +56,12 @@ const Chatbot = () => {
             ...prevMessages,
             { sender: "user", text: input },
         ]);
+        setTimeout(() => {
+            const el = document.querySelector(".chatbot-messages");
+            if (el) {
+                el.scrollTop = el.scrollHeight;
+            }
+        }, 100);
     }
 
     async function addBotReply(response) {
@@ -63,35 +69,70 @@ const Chatbot = () => {
             ...prevMessages,
             { sender: "bot", text: response },
         ]);
+        setTimeout(() => {
+            const el = document.querySelector(".chatbot-messages");
+            if (el) {
+                el.scrollTop = el.scrollHeight;
+            }
+        }, 100);
     }
 
-    function startTour() {
-        setTimeout(() => {
-            addBotReply("Starting the tour in...");
-            setTimeout(() => {
-                addBotReply("3");
-                setTimeout(() => {
-                    addBotReply("2");
-                    setTimeout(() => {
-                        addBotReply("1");
-                        setTimeout(() => {
-                            addBotReply("Let's begin the tour!");
-                            navigate({
-                                to: "/about",
-                                search: { isTouring: true },
-                            });
-                        }, 1000);
-                    }, 1000);
-                }, 1000);
-            }, 1000);
-        }, 1000);
+    async function startTour() {
+        await addBotReply("Starting the tour in...");
+        await delay(1000);
+        await addBotReply("3");
+        await delay(1000);
+        await addBotReply("2");
+        await delay(1000);
+        await addBotReply("1");
+        await delay(1000);
+        await addBotReply("Let's begin the tour!");
+        await delay(1000);
+        toggleChat();
+        window.history.pushState({}, "", "/#home");
+        await delay(400);
+        setIsTouring(true);
+        setTourText(
+            "Welcome to my portfolio! Here you can find information about my projects, skills, and how to contact me. Let's start with my projects."
+        );
+        await delay(3000);
+        window.history.pushState({}, "", "/#projects");
+        setTourText(
+            "Here are some of the cool things I've built — websites, apps, and more. Upcoming: some interesting facts about me!"
+        );
+        await delay(3000);
+        window.history.pushState({}, "", "/#about");
+        setTourText(
+            "So, about me — I love coding and creating innovative solutions. I also enjoy collaborating with others. After this, let's see how to contact me!"
+        );
+        await delay(3000);
+        window.history.pushState({}, "", "/#contact");
+        setTourText("There are a LOT of ways to reach me.");
+        await delay(3000);
+        window.history.pushState({}, "", "/#home");
+        setTourText(
+            "So that was the tour! Hope you had a ton of fun and know all about me now!"
+        );
+        await delay(3000);
+        setIsTouring(false);
+        setTourText("");
+    }
+
+    function delay(ms) {
+        return new Promise((res) => setTimeout(res, ms));
     }
 
     return (
-        <div className="chatbot-container text-black chatbot-container-closed">
-            <button className="chatbot-toggle active" onClick={toggleChat}>
-                <FaRobot size={24} />
-            </button>
+        <>
+            {isTouring && (
+                <div className="fixed bottom-[20px] w-[80%] left-1/2 transform -translate-x-1/2 bg-purple-300 text-black px-4 py-2 rounded shadow z-100 text-center">
+                    <p className="font-semibold">{tourText}</p>
+                </div>
+            )}
+            <div className="chatbot-container text-black chatbot-container-closed">
+                <button className="chatbot-toggle active" onClick={toggleChat}>
+                    <FaRobot size={24} />
+                </button>
                 <div className="chatbot-box closed">
                     <div className="chatbot-messages">
                         {messages.map((msg, index) => (
@@ -118,7 +159,8 @@ const Chatbot = () => {
                         <button onClick={sendMessage}>Send</button>
                     </div>
                 </div>
-        </div>
+            </div>
+        </>
     );
 };
 

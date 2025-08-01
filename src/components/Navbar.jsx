@@ -1,4 +1,3 @@
-import { Link } from "@tanstack/react-router";
 import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import { useWindowScroll } from "react-use";
@@ -9,8 +8,14 @@ export default function Navbar() {
     const [showDesktopNavbar, setShowDesktopNavbar] = useState(true);
     const { y } = useWindowScroll();
     const lastScrollY = useRef(0);
+    const ignoreScroll = useRef(false);
 
     useEffect(() => {
+        if (ignoreScroll.current) {
+            lastScrollY.current = y;
+            return;
+        }
+
         if (y > lastScrollY.current && y > 50) {
             setShowDesktopNavbar(false);
         } else {
@@ -23,8 +28,8 @@ export default function Navbar() {
         <>
             {/* Mobile Sidebar */}
             <div
-                className={`fixed top-0 left-0 h-full w-3/4 max-w-[250px] bg-gray-900 dark:bg-gray-950 shadow-lg transform transition-transform duration-300 z-50 md:hidden ${
-                    isOpen ? "translate-x-0" : "-translate-x-full"
+                className={`fixed top-0 right-0 h-full w-3/4 max-w-[250px] bg-gray-900 dark:bg-gray-950 shadow-lg transform transition-transform duration-300 z-50 md:hidden ${
+                    isOpen ? "translate-x-0" : "-translate-x-[-100%]"
                 }`}
             >
                 <div className="p-4 flex flex-col gap-4">
@@ -34,21 +39,30 @@ export default function Navbar() {
                     >
                         <X size={24} />
                     </button>
-                    {["/", "/about", "/projects", "/contact"].map((path, i) => (
-                        <Link
-                            key={i}
-                            to={path}
-                            onClick={() => setIsOpen(false)}
-                            className="text-white hover:text-purple-400 transition"
-                        >
-                            {path === "/"
-                                ? "Home"
-                                : path
-                                      .replace("/", "")
-                                      .charAt(0)
-                                      .toUpperCase() + path.slice(2)}
-                        </Link>
-                    ))}
+                    {["#home", "#projects", "#about", "#contact"].map(
+                        (path, i) => (
+                            <a
+                                key={i}
+                                href={path}
+                                onClick={() => {
+                                    setIsOpen(false);
+                                    ignoreScroll.current = true;
+                                    setTimeout(() => {
+                                        lastScrollY.current = y;
+                                        ignoreScroll.current = false;
+                                    }, 700);
+                                }}
+                                className="text-white hover:text-purple-400 transition"
+                            >
+                                {path === "#home"
+                                    ? "Home"
+                                    : path
+                                          .replace("#", "")
+                                          .charAt(0)
+                                          .toUpperCase() + path.slice(2)}
+                            </a>
+                        )
+                    )}
                 </div>
             </div>
 
@@ -60,6 +74,7 @@ export default function Navbar() {
             >
                 <div className="flex items-center justify-between md:hidden">
                     <h1 className="text-xl font-semibold">Portfolio</h1>
+                    <DarkMode />
                     <button onClick={() => setIsOpen(!isOpen)}>
                         {isOpen ? <X size={28} /> : <Menu size={28} />}
                     </button>
@@ -68,30 +83,58 @@ export default function Navbar() {
                 {/* Desktop Menu */}
                 <div className="hidden md:flex justify-between items-center">
                     <div className="flex gap-8 items-center">
-                        <Link
+                        <a
                             className="hover:text-purple-400 transition"
-                            to="/"
+                            href="#home"
+                            onClick={() => {
+                                ignoreScroll.current = true;
+                                setTimeout(() => {
+                                    ignoreScroll.current = false;
+                                    lastScrollY.current = y;
+                                }, 700);
+                            }}
                         >
                             Home
-                        </Link>
-                        <Link
+                        </a>
+                        <a
                             className="hover:text-purple-400 transition"
-                            to="/about"
-                        >
-                            About
-                        </Link>
-                        <Link
-                            className="hover:text-purple-400 transition"
-                            to="/projects"
+                            href="#projects"
+                            onClick={() => {
+                                ignoreScroll.current = true;
+                                setTimeout(() => {
+                                    ignoreScroll.current = false;
+                                    lastScrollY.current = y;
+                                }, 700);
+                            }}
                         >
                             Projects
-                        </Link>
-                        <Link
+                        </a>
+                        <a
                             className="hover:text-purple-400 transition"
-                            to="/contact"
+                            href="#about"
+                            onClick={() => {
+                                ignoreScroll.current = true;
+                                setTimeout(() => {
+                                    ignoreScroll.current = false;
+                                    lastScrollY.current = y;
+                                }, 700);
+                            }}
+                        >
+                            About
+                        </a>
+                        <a
+                            className="hover:text-purple-400 transition"
+                            href="#contact"
+                            onClick={() => {
+                                ignoreScroll.current = true;
+                                setTimeout(() => {
+                                    ignoreScroll.current = false;
+                                    lastScrollY.current = y;
+                                }, 700);
+                            }}
                         >
                             Contact
-                        </Link>
+                        </a>
                     </div>
                     <DarkMode />
                 </div>
