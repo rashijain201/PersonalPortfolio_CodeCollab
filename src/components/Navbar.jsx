@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import { useWindowScroll } from "react-use";
 import DarkMode from "./DarkMode";
+import config from "../config";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -68,7 +69,7 @@ export default function Navbar() {
 
             {/* Top Navbar */}
             <nav
-                className={`bg-gray-800 dark:bg-gray-900 text-white px-6 py-4 transition-transform duration-300 fixed w-full z-40 ${
+                className={`text-white px-6 py-4 transition-transform duration-300 fixed w-full z-40 ${
                     showDesktopNavbar ? "translate-y-0" : "-translate-y-full"
                 }`}
             >
@@ -82,6 +83,7 @@ export default function Navbar() {
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex justify-between items-center">
+                    <div>{config.social.abbreviatedName}</div>
                     <div className="flex gap-8 items-center">
                         <a
                             className="hover:text-purple-400 transition"

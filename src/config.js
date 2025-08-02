@@ -7,22 +7,15 @@ export default {
         author: "Your Name",
         keywords: "portfolio, react, template, web developer",
     },
-    navLinks: [
-        { label: "Home", path: "/" },
-        { label: "About", path: "/about" },
-        { label: "Projects", path: "/projects" },
-        { label: "Contact", path: "/contact" },
-    ],
     social: {
         github: "https://github.com/yourusername",
         linkedin: "https://linkedin.com/in/yourusername",
         email: "mailto:you@example.com",
+        abbreviatedName: "YN",
     },
     theme: {
-        // light and dark background colors for the entire site
         backgroundLight: "#f9fafb",
         backgroundDark: "#1e293b",
-        // // background colors for individual page sections
         sectionLight: "#ffffff",
         sectionDark: "#374151",
         lineColor: "rgba(128, 0, 128, 0.3)",
@@ -39,21 +32,10 @@ export default {
         url: "https://example.com",
     },
     home: {
-        heading: "Welcome to My Portfolio",
-        subHeading: "A showcase of my work and skills",
-        buttonLabel: "Explore My Work",
-        grid: [
-            {
-                title: "Portfolio Template 1",
-                description:
-                    "Customize this card to highlight your featured project or template.",
-            },
-            {
-                title: "Portfolio Template 2",
-                description:
-                    "Add a second featured item or remove this section entirely.",
-            },
-        ],
+        heading: "Name Here",
+        subHeading:
+            "AI Enthusiast interested in Web Development and Machine Learning and integrating cybersecurity.",
+        buttonLabel: "Let's connect",
     },
     about: {
         heading: "About Me",
@@ -75,7 +57,7 @@ export default {
                 description:
                     "Add a second featured item or remove this section entirely.",
             },
-        ]
+        ],
     },
     contact: {
         heading: "Let's Connect",
