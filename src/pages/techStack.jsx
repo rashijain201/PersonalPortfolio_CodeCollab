@@ -2,7 +2,7 @@ import { SectionHeading } from "../templates/basicUIComponents";
 import config from "../config";
 
 
-function techStack() {
+function TechStack() {
     return (
         <div className="relative flex-grow flex items-center justify-center text-center px-6">
             <div className="p-8 space-y-6 text-center justify-center items-center flex-grow align-middle">
@@ -32,4 +32,4 @@ function techStack() {
     );
 }
 
-export default techStack;
+export default TechStack;
