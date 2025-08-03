@@ -8,6 +8,7 @@ import RootLayout from "./rootlayout";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Projects from "./pages/projects";
+import TechStack from "./pages/techStack";
 import Contact from "./pages/contact";
 import NotFound from "./pages/not-found";
 
@@ -30,6 +31,11 @@ const projectsRoute = createRoute({
     path: "/projects",
     getParentRoute: () => rootRoute,
     component: Projects,
+});
+const techStackRoute = createRoute({
+    path: "/techStack",
+    getParentRoute: () => rootRoute,
+    component: TechStack,
 });
 const contactRoute = createRoute({
     path: "/contact",
