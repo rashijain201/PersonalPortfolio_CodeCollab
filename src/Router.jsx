@@ -35,7 +35,7 @@ const projectsRoute = createRoute({
 const techStackRoute = createRoute({
     path: "/techStack",
     getParentRoute: () => rootRoute,
-    component: techStack,
+    component: TechStack,
 });
 const contactRoute = createRoute({
     path: "/contact",
