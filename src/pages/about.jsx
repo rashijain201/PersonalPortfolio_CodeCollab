@@ -114,7 +114,7 @@ function About() {
       </div>
 
       <div className="w-full max-w-4xl">
-        <VerticalTimeline>
+        <VerticalTimeline lineColor="#999999">
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} />
           ))}
