@@ -68,6 +68,33 @@ return (
           Text1="This is my personal website, built using React.js and Tailwind CSS. It showcases my projects, skills, and experiences."
           Text2="The website is designed to be responsive and user-friendly, providing a seamless experience across devices. It features a modern design with smooth animations and transitions."
         />
+
+        <ProjectComponent
+          Image="src/Project_Image/code_collab.png"
+          Number="02"
+          Title="Project 2"
+          ImageLink="https://github.com/rbose21-05/PersonalPortfolio_CodeCollab"
+          Text1="Description of Project 2"
+          Text2="Added Description of features and tech stack of Project 2."
+        />
+
+        <ProjectComponent
+          Image="src/Project_Image/code_collab.png"
+          Number="03"
+          Title="Project 3"
+          ImageLink="https://github.com/rbose21-05/PersonalPortfolio_CodeCollab"
+          Text1="Description of Project 3"
+          Text2="Added Description of features and tech stack of Project 3."
+        />
+
+        <ProjectComponent
+          Image="src/Project_Image/code_collab.png"
+          Number="04"
+          Title="Project 4"
+          ImageLink="https://github.com/rbose21-05/PersonalPortfolio_CodeCollab"
+          Text1="Description of Project 4"
+          Text2="Added Description of features and tech stack of Project 4."
+        />
       </div>
     </section>
   </div>
