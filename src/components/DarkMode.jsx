@@ -24,14 +24,14 @@ const DarkMode = () => {
     }, [isDark]);
 
     return (
-        <button
-            className="text-white"
-            onClick={() => setIsDark(!isDark)}
-            aria-label="Toggle Dark Mode"
-        >
-            {isDark ? <Sun size={20} /> : <Moon size={20} />}
-        </button>
-    );
-};
+    <button
+        className="text-black dark:text-white"
+        onClick={() => setIsDark(!isDark)}
+        aria-label="Toggle Dark Mode"
+    >
+        {isDark ? <Sun size={20} /> : <Moon size={20} />}
+    </button>
+);
+}
 
 export default DarkMode;
