@@ -23,7 +23,7 @@ function Tech_Stack() {
                                        dark:hover:bg-purple-600/70 
                                        transition-all duration-300"
                         >
-                            {tech}
+                            {tech.trim()}
                         </div>
                     ))}
                 </div>
