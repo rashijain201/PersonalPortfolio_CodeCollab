@@ -1,4 +1,6 @@
 import { SectionHeading } from "../templates/basicUIComponents";
+import config from "../config";
+
 
 function Tech_Stack() {
     return (
