@@ -59,6 +59,19 @@ export default {
             },
         ],
     },
+    techStackPage: {
+        heading: "Tech Stack",
+        list: [
+            "Python",
+            "JavaScript",
+            "Java",
+            "React.js",
+            "Tailwind CSS",
+            "Git & GitHub",
+            "SQL"
+
+        ],
+    },
     contact: {
         heading: "Let's Connect",
         description:
