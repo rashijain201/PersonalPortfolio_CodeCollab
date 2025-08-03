@@ -68,7 +68,7 @@ export default {
             "React.js",
             "Tailwind CSS",
             "Git & GitHub",
-            "SQL",
+            "SQL"
             
         ],
     },
