@@ -13,7 +13,8 @@ const Home = () => {
                 <div className="mt-20">
                     <LargerSectionHeading text={config.home.heading} />
                 </div>
-                <div className="text-2xl text-white font-bold mb-4">
+                <div className="text-2xl text-purple-600 font-bold mb-4 dark:text-white">
+
                     <Typewriter
                         options={{
                             strings: [
