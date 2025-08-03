@@ -7,7 +7,7 @@ import Home from "./pages/home";
 import About from "./pages/about";
 import Projects from "./pages/projects";
 import Contact from "./pages/contact";
-import Skills from "./pages/Skills";
+import Tech_Stack from "./pages/Tech_Stack";
 
 export default function RootLayout() {
     return (
@@ -23,8 +23,8 @@ export default function RootLayout() {
                     <div className="min-h-screen scroll-mt-20" id="projects">
                         <Projects />
                     </div>
-                     <div className="min-h-screen scroll-mt-20" id="about">
-                        <Skills />
+                     <div className="min-h-screen scroll-mt-20" id="Tech_Stack">
+                        <Tech_Stack />
                     </div>
                     <div className="min-h-screen scroll-mt-20" id="about">
                         <About />
