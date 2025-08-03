@@ -53,7 +53,7 @@ export default function Navbar() {
                                         ignoreScroll.current = false;
                                     }, 700);
                                 }}
-                                className="text-purple hover:text-purple-400 transition"
+                                className="text-white hover:text-purple-400 transition"
                             >
                                 {path === "#home"
                                     ? "Home"
@@ -83,10 +83,12 @@ export default function Navbar() {
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex justify-between items-center dark:text-white">
-                    <div>{config.social.abbreviatedName}</div>
-                    <div className="flex gap-8 items-center">
+                    <div className="text-black dark:text-white">
+                        {config.social.abbreviatedName}
+                    </div>
+                    <div className="flex gap-8 items-center text-black dark:text-white">
                         <a
-                            className="text-purple-600 hover:text-purple-400 transition"
+                            className="hover:text-purple-400 transition"
                             href="#home"
                             onClick={() => {
                                 ignoreScroll.current = true;
@@ -99,7 +101,7 @@ export default function Navbar() {
                             Home
                         </a>
                         <a
-                            className="text-purple-600 hover:text-purple-400 transition"
+                            className="hover:text-purple-400 transition"
                             href="#projects"
                             onClick={() => {
                                 ignoreScroll.current = true;
@@ -112,7 +114,7 @@ export default function Navbar() {
                             Projects
                         </a>
                         <a
-                            className="text-purple-600 hover:text-purple-400 transition"
+                            className="hover:text-purple-400 transition"
                             href="#about"
                             onClick={() => {
                                 ignoreScroll.current = true;
@@ -125,7 +127,7 @@ export default function Navbar() {
                             About
                         </a>
                         <a
-                            className="text-purple-600 hover:text-purple-400 transition"
+                            className="hover:text-purple-400 transition"
                             href="#contact"
                             onClick={() => {
                                 ignoreScroll.current = true;
