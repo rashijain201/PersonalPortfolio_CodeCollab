@@ -105,14 +105,18 @@ const ExperienceCard = ({ experience }) => (
 function Experience() {
   return (
     <div className="relative flex-grow flex flex-col items-center justify-center text-center px-6">
-      <div className="w-full flex flex-row items-center justify-center gap-4 flex-wrap mt-6 mb-10">
-        <h1 className="text-5xl md:text-6xl font-extrabold font-[Montserrat] tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-700 dark:from-purple-300 dark:to-indigo-500">
-          Work
-        </h1>
-        <h1 className="text-5xl md:text-6xl font-extrabold font-[Montserrat] tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-700 dark:from-purple-300 dark:to-indigo-500">
-          Experience
-        </h1>
-      </div>
+      <div
+                        className="w-full flex flex-row items-center justify-center gap-4 flex-wrap animate-fade-in-top opacity-0 [&.animate]:opacity-100"
+                        data-animate-on-scroll
+                    >
+                        <h1 className="text-5xl md:text-6xl font-extrabold font-[Montserrat] tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-700 dark:from-purple-300 dark:to-indigo-500">
+                          Work
+                        </h1>
+                        <h1 className="text-5xl md:text-6xl font-extrabold font-[Montserrat] tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-700 dark:from-purple-300 dark:to-indigo-500">
+                          Experience
+                        </h1>
+                    </div>
+                    
 
       <div className="w-full max-w-4xl">
         <VerticalTimeline lineColor="#999999">

@@ -10,9 +10,17 @@ const Home = () => {
     return (
         <>
             <div className="p-8 space-y-6 text-center justify-center items-center flex-grow align-middle">
-                <div className="mt-20">
-                    <LargerSectionHeading text={config.home.heading} />
-                </div>
+                <div
+                        className="w-full flex flex-row items-center justify-center gap-4 flex-wrap animate-fade-in-top opacity-0 [&.animate]:opacity-100"
+                        data-animate-on-scroll
+                    >
+                        <h1 className="text-5xl md:text-6xl font-extrabold font-[Montserrat] tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-700 dark:from-purple-300 dark:to-indigo-500">
+                            YOUR
+                        </h1>
+                        <h1 className="text-5xl md:text-6xl font-extrabold font-[Montserrat] tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-700 dark:from-purple-300 dark:to-indigo-500">
+                            NAME
+                        </h1>
+                    </div>
                 <div className="text-2xl text-black font-bold mb-4 dark:text-white">
                     <Typewriter
                         options={{
