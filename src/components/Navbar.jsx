@@ -40,7 +40,7 @@ export default function Navbar() {
                     >
                         <X size={24} />
                     </button>
-                    {["#home", "#projects", "#about", "#contact"].map(
+                    {["#home", "#experience", "#projects", "#contact"].map(
                         (path, i) => (
                             <a
                                 key={i}
@@ -102,6 +102,19 @@ export default function Navbar() {
                         </a>
                         <a
                             className="hover:text-purple-400 transition"
+                            href="#experience"
+                            onClick={() => {
+                                ignoreScroll.current = true;
+                                setTimeout(() => {
+                                    ignoreScroll.current = false;
+                                    lastScrollY.current = y;
+                                }, 700);
+                            }}
+                        >
+                        Experience
+                        </a>
+                        <a
+                            className="hover:text-purple-400 transition"
                             href="#projects"
                             onClick={() => {
                                 ignoreScroll.current = true;
@@ -109,22 +122,9 @@ export default function Navbar() {
                                     ignoreScroll.current = false;
                                     lastScrollY.current = y;
                                 }, 700);
-                            }}
+                            }}   
                         >
-                            Projects
-                        </a>
-                        <a
-                            className="hover:text-purple-400 transition"
-                            href="#about"
-                            onClick={() => {
-                                ignoreScroll.current = true;
-                                setTimeout(() => {
-                                    ignoreScroll.current = false;
-                                    lastScrollY.current = y;
-                                }, 700);
-                            }}
-                        >
-                            About
+                        Projects
                         </a>
                         <a
                             className="hover:text-purple-400 transition"
@@ -136,6 +136,7 @@ export default function Navbar() {
                                     lastScrollY.current = y;
                                 }, 700);
                             }}
+                            
                         >
                             Contact
                         </a>

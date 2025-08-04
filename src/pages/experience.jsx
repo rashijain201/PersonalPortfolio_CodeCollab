@@ -8,6 +8,8 @@ import { motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
 import '@fontsource/montserrat'; 
 
+
+  
 const experiences = [
   {
     title: "Software Development Intern",
@@ -100,8 +102,7 @@ const ExperienceCard = ({ experience }) => (
     </div>
   </VerticalTimelineElement>
 );
-
-function About() {
+function Experience() {
   return (
     <div className="relative flex-grow flex flex-col items-center justify-center text-center px-6">
       <div className="w-full flex flex-row items-center justify-center gap-4 flex-wrap mt-6 mb-10">
@@ -124,4 +125,4 @@ function About() {
   );
 }
 
-export default About;
+export default Experience;

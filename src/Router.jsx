@@ -6,7 +6,7 @@ import {
 } from "@tanstack/react-router";
 import RootLayout from "./rootlayout";
 import Home from "./pages/home";
-import About from "./pages/about";
+import Experience from "./pages/experience";
 import Projects from "./pages/projects";
 import TechStack from "./pages/techStack";
 import Contact from "./pages/contact";
@@ -22,10 +22,10 @@ const homeRoute = createRoute({
     getParentRoute: () => rootRoute,
     component: Home,
 });
-const aboutRoute = createRoute({
-    path: "/about",
+const experienceRoute = createRoute({
+    path: "/experience",
     getParentRoute: () => rootRoute,
-    component: About,
+    component: Experience,
 });
 const projectsRoute = createRoute({
     path: "/projects",
@@ -45,7 +45,7 @@ const contactRoute = createRoute({
 
 const routeTree = rootRoute.addChildren([
     homeRoute,
-    aboutRoute,
+    experienceRoute,
     projectsRoute,
     contactRoute,
 ]);

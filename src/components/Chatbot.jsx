@@ -93,17 +93,17 @@ const Chatbot = () => {
         await delay(400);
         setIsTouring(true);
         setTourText(
-            "Welcome to my portfolio! Here you can find information about my projects, skills, and how to contact me. Let's start with my projects."
+            "Welcome to my portfolio! Here you can find information about my experience, projects, skills, and how to contact me. Let's start with my experience."
+        );
+        await delay(3000);
+        window.history.pushState({}, "", "/#experience");
+        setTourText(
+          "These are some spaces I've contributed in and added value to. After this, let me take you through some projects I'm proud of!"  
         );
         await delay(3000);
         window.history.pushState({}, "", "/#projects");
         setTourText(
-            "Here are some of the cool things I've built — websites, apps, and more. Upcoming: some interesting facts about me!"
-        );
-        await delay(3000);
-        window.history.pushState({}, "", "/#about");
-        setTourText(
-            "So, about me — I love coding and creating innovative solutions. I also enjoy collaborating with others. After this, let's see how to contact me!"
+            "Here are some of the cool things I've built — websites, apps, and more. Upcoming: Ways to contact me so that maybe we could build something awesome together!"
         );
         await delay(3000);
         window.history.pushState({}, "", "/#contact");

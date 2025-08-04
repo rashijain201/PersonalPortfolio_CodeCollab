@@ -4,10 +4,9 @@ import Meta from "./components/Meta";
 import Chatbot from "./components/Chatbot";
 import ParticlesBackground from "./components/ParticlesBackground";
 import Home from "./pages/home";
-import About from "./pages/about";
+import Experience from "./pages/experience";
 import Projects from "./pages/projects";
 import TechStack from "./pages/techStack";
-
 import Contact from "./pages/contact";
 
 export default function RootLayout() {
@@ -16,19 +15,19 @@ export default function RootLayout() {
             <Meta />
             <Navbar />
             <main className="flex-grow flex">
-                <ParticlesBackground />
+            <ParticlesBackground />
                 <div className="flex flex-col w-full max-w-6xl mx-auto px-4 py-8 relative z-10 scroll-smooth">
                     <div className="min-h-screen scroll-mt-20" id="home">
                         <Home />
                     </div>
+                    <div className="min-h-screen scroll-mt-20" id="experience">
+                        <Experience />
+                    </div>
                     <div className="min-h-screen scroll-mt-20" id="projects">
                         <Projects />
                     </div>
-                     <div className="min-h-screen scroll-mt-20" id="TechStack">
+                    <div className="min-h-screen scroll-mt-20" id="TechStack">
                         <TechStack />
-                    </div>
-                    <div className="min-h-screen scroll-mt-20" id="about">
-                        <About />
                     </div>
                     <div className="min-h-screen scroll-mt-20" id="contact">
                         <Contact />
