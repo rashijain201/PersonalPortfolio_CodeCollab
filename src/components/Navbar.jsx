@@ -111,7 +111,7 @@ export default function Navbar() {
                                 }, 700);
                             }}
                         >
-                        Experience
+                            Experience
                         </a>
                         <a
                             className="hover:text-purple-400 transition"
@@ -122,9 +122,9 @@ export default function Navbar() {
                                     ignoreScroll.current = false;
                                     lastScrollY.current = y;
                                 }, 700);
-                            }}   
+                            }}
                         >
-                        Projects
+                            Projects
                         </a>
                         <a
                             className="hover:text-purple-400 transition"
@@ -136,7 +136,6 @@ export default function Navbar() {
                                     lastScrollY.current = y;
                                 }, 700);
                             }}
-                            
                         >
                             Contact
                         </a>

@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./Chatbot.css";
 
 const Chatbot = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
     const [messages, setMessages] = useState([
         { sender: "bot", text: "Hi! How can I help you today?" },
     ]);
@@ -98,7 +98,7 @@ const Chatbot = () => {
         await delay(3000);
         window.history.pushState({}, "", "/#experience");
         setTourText(
-          "These are some spaces I've contributed in and added value to. After this, let me take you through some projects I'm proud of!"  
+            "These are some spaces I've contributed in and added value to. After this, let me take you through some projects I'm proud of!"
         );
         await delay(3000);
         window.history.pushState({}, "", "/#projects");
@@ -129,11 +129,11 @@ const Chatbot = () => {
                     <p className="font-semibold">{tourText}</p>
                 </div>
             )}
-            <div className="chatbot-container text-black chatbot-container-closed">
-                <button className="chatbot-toggle active" onClick={toggleChat}>
+            <div className="chatbot-container text-black">
+                <button className="chatbot-toggle" onClick={toggleChat}>
                     <FaRobot size={24} />
                 </button>
-                <div className="chatbot-box closed">
+                <div className="chatbot-box">
                     <div className="chatbot-messages">
                         {messages.map((msg, index) => (
                             <div

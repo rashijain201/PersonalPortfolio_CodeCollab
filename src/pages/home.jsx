@@ -1,26 +1,22 @@
-import {
-    SectionHeading,
-    SubHeading,
-    LargerSectionHeading,
-} from "../templates/basicUIComponents";
+import { SectionHeading, SubHeading } from "../templates/basicUIComponents";
 import Typewriter from "typewriter-effect";
 import config from "../config";
 
 const Home = () => {
     return (
         <>
-            <div className="p-8 space-y-6 text-center justify-center items-center flex-grow align-middle">
+            <div className="p-8 mt-10 space-y-6 text-center justify-center items-center flex-grow align-middle">
                 <div
-                        className="w-full flex flex-row items-center justify-center gap-4 flex-wrap animate-fade-in-top opacity-0 [&.animate]:opacity-100"
-                        data-animate-on-scroll
-                    >
-                        <h1 className="text-5xl md:text-6xl font-extrabold font-[Montserrat] tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-700 dark:from-purple-300 dark:to-indigo-500">
-                            Your 
-                        </h1>
-                        <h1 className="text-5xl md:text-6xl font-extrabold font-[Montserrat] tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-700 dark:from-purple-300 dark:to-indigo-500">
-                            Name
-                        </h1>
-                    </div>
+                    className="w-full flex flex-row items-center justify-center gap-4 flex-wrap animate-fade-in-top opacity-0 [&.animate]:opacity-100"
+                    data-animate-on-scroll
+                >
+                    <h1 className="text-5xl md:text-7xl font-extrabold font-[Montserrat] tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-700 dark:from-purple-300 dark:to-indigo-500">
+                        YOUR
+                    </h1>
+                    <h1 className="text-5xl md:text-7xl font-extrabold font-[Montserrat] tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-700 dark:from-purple-300 dark:to-indigo-500">
+                        NAME
+                    </h1>
+                </div>
                 <div className="text-2xl text-black font-bold mb-4 dark:text-white">
                     <Typewriter
                         options={{
@@ -38,6 +34,7 @@ const Home = () => {
                 </div>
                 <SectionHeading text="UMass Amherst" />
                 <SubHeading text={config.home.subHeading} />
+
                 <button
                     onClick={() => (window.location.href = "/#contact")}
                     className="bg-purple-600 flex mx-auto text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition duration-300  dark:bg-purple-500 dark:hover:bg-purple-600 dark:text-black"
@@ -58,6 +55,14 @@ const Home = () => {
                     </svg>
                     {config.home.buttonLabel}
                 </button>
+                <a
+                    href="/resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 rounded bg-purple-600 text-white hover:bg-purple-700 transition text-sm mr-5"
+                >
+                    Resume
+                </a>
             </div>
         </>
     );
