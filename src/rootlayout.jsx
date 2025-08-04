@@ -15,21 +15,27 @@ export default function RootLayout() {
             <Meta />
             <Navbar />
             <main className="flex-grow flex">
-            <ParticlesBackground />
-                <div className="flex flex-col w-full max-w-6xl mx-auto px-4 py-8 relative z-10 scroll-smooth">
-                    <div className="min-h-screen scroll-mt-20" id="home">
+                <ParticlesBackground />
+                <div className="flex flex-col w-full mx-auto py-8 relative z-10 scroll-smooth">
+                    <div className="min-h-screen scroll-mt-10" id="home">
                         <Home />
                     </div>
-                    <div className="min-h-screen scroll-mt-20" id="experience">
+                    <div
+                        className="min-h-screen scroll-mt-10 bg-black/10 py-8"
+                        id="experience"
+                    >
                         <Experience />
                     </div>
-                    <div className="min-h-screen scroll-mt-20" id="projects">
+                    <div className="min-h-screen scroll-mt-10" id="projects">
                         <Projects />
                     </div>
-                    <div className="min-h-screen scroll-mt-20" id="TechStack">
+                    <div
+                        className="scroll-mt-10 bg-black/10 py-8"
+                        id="techStack"
+                    >
                         <TechStack />
                     </div>
-                    <div className="min-h-screen scroll-mt-20" id="contact">
+                    <div className="min-h-screen scroll-mt-10" id="contact">
                         <Contact />
                     </div>
                     <Chatbot />

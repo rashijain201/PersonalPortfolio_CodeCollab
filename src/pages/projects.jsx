@@ -35,7 +35,7 @@ const Projects = () => {
 
     return (
         <div>
-            <section className="self-stretch overflow-hidden flex flex-col py-32 px-4 box-border max-w-full">
+            <section className="self-stretch overflow-hidden flex flex-col py-10 px-4 box-border max-w-full">
                 <div className="self-stretch overflow-hidden flex flex-col items-start justify-start py-0 px-8 box-border gap-[40px] max-w-full">
                     {/* Heading Row */}
                     <div

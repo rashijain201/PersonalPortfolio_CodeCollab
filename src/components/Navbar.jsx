@@ -64,15 +64,6 @@ export default function Navbar() {
                             </a>
                         )
                     )}
-                    <a
-                        href="/resume.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-white hover:text-purple-400 transition mt-2 border-t border-gray-700 pt-4"
-                    >
-                        Resume
-                    </a>
-
                 </div>
             </div>
 
@@ -120,7 +111,7 @@ export default function Navbar() {
                                 }, 700);
                             }}
                         >
-                        Experience
+                            Experience
                         </a>
                         <a
                             className="hover:text-purple-400 transition"
@@ -131,9 +122,9 @@ export default function Navbar() {
                                     ignoreScroll.current = false;
                                     lastScrollY.current = y;
                                 }, 700);
-                            }}   
+                            }}
                         >
-                        Projects
+                            Projects
                         </a>
                         <a
                             className="hover:text-purple-400 transition"
@@ -145,19 +136,9 @@ export default function Navbar() {
                                     lastScrollY.current = y;
                                 }, 700);
                             }}
-                            
                         >
                             Contact
                         </a>
-                        <a
-                            href="/resume.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="px-4 py-2 rounded bg-purple-600 text-white hover:bg-purple-700 transition text-sm"
-                        >
-                            Resume
-                        </a>
-
                     </div>
                     <DarkMode />
                 </div>
