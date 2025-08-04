@@ -15,10 +15,10 @@ const Home = () => {
                         data-animate-on-scroll
                     >
                         <h1 className="text-5xl md:text-6xl font-extrabold font-[Montserrat] tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-700 dark:from-purple-300 dark:to-indigo-500">
-                            YOUR
+                            Your 
                         </h1>
                         <h1 className="text-5xl md:text-6xl font-extrabold font-[Montserrat] tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-700 dark:from-purple-300 dark:to-indigo-500">
-                            NAME
+                            Name
                         </h1>
                     </div>
                 <div className="text-2xl text-black font-bold mb-4 dark:text-white">

@@ -82,7 +82,7 @@ function Contact() {
           >
             <FaLinkedin className="text-3xl text-blue-600 mb-4" />
             <h3 className="font-semibold text-lg mb-1 text-blue-600">LinkedIn</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-300">urvi-guptaa</p>
+            <p className="text-sm text-gray-600 dark:text-gray-300">Your Name</p>
           </a>
 
           {/* GitHub */}
@@ -95,7 +95,7 @@ function Contact() {
           >
             <FaGithub className="text-3xl text-black dark:text-white mb-4" />
             <h3 className="font-semibold text-lg mb-1 text-black dark:text-white">GitHub</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-300">Urvi-Gupta06</p>
+            <p className="text-sm text-gray-600 dark:text-gray-300">GitHub User</p>
           </a>
         </div>
       </div>
