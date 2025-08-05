@@ -13,19 +13,21 @@ export default {
         email: "mailto:you@example.com",
         abbreviatedName: "YN",
     },
-    theme: {
-        backgroundLight: "#f9fafb",
-        backgroundDark: "#1e293b",
-        sectionLight: "#ffffff",
-        sectionDark: "#374151",
-        lineColor: "rgba(128, 0, 128, 0.3)",
-        particleColor: "rgba(128, 0, 128, 0.8)",
-        strokeStyle: `rgba(128, 0, 128, `,
-        shadowColor: "rgba(128, 0, 128, 0.7)",
-        lineColorDark: "rgba(255, 255, 255, 0.3)",
-        particleColorDark: "rgba(255, 255, 255, 0.8)",
-        strokeStyleDark: `rgba(255, 255, 255, `,
-        shadowColorDark: "rgba(255, 255, 255, 0.7)",
+    backgroundTheme: {
+        light: {
+            sphere1: "linear-gradient(40deg, rgba(255, 0, 128, 0.8), rgba(255, 102, 0, 0.4))",
+            sphere2: "linear-gradient(240deg, rgba(72, 0, 255, 0.8), rgba(0, 183, 255, 0.4))",
+            sphere3: "linear-gradient(120deg, rgba(133, 89, 255, 0.5), rgba(98, 216, 249, 0.3))",
+            particleColor: "white",
+            glow: "radial-gradient(circle, rgba(72, 0, 255, 0.15), transparent 70%)"
+        },
+        dark: {
+            sphere1: "linear-gradient(40deg, rgba(255, 200, 128, 0.8), rgba(255, 102, 0, 0.4))",
+            sphere2: "linear-gradient(240deg, rgba(0, 200, 255, 0.8), rgba(0, 183, 255, 0.4))",
+            sphere3: "linear-gradient(120deg, rgba(133, 200, 255, 0.5), rgba(98, 216, 249, 0.3))",
+            particleColor: "rgba(255, 255, 255, 0.8)",
+            glow: "radial-gradient(circle, rgba(255, 255, 255, 0.15), transparent 70%)"
+        }
     },
     openGraph: {
         image: "/social-preview.png",
