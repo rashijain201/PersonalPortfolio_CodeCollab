@@ -14,7 +14,7 @@ export default function RootLayout() {
             <Meta />
             <Navbar />
             <main className="flex-grow flex">
-                <ParticlesBackground />
+              
                 <div className="flex flex-col w-full mx-auto py-8 relative z-10 scroll-smooth">
                     <div className="min-h-screen scroll-mt-10" id="home">
                         <Home />
