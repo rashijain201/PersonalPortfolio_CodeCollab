@@ -2,7 +2,6 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Meta from "./components/Meta";
 import Chatbot from "./components/Chatbot";
-import ParticlesBackground from "./components/ParticlesBackground";
 import Home from "./pages/home";
 import Experience from "./pages/experience";
 import Projects from "./pages/projects";
