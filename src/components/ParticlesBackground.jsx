@@ -22,7 +22,17 @@ const ParticlesBackground = () => {
         return () => observer.disconnect();
     }, [themeMode]);
 
-    return null; // No background canvas, just watches theme
+    return (
+        <div className={`gradient-background ${themeMode}`}>
+            <div className="gradient-sphere sphere-1"></div>
+            <div className="gradient-sphere sphere-2"></div>
+            <div className="gradient-sphere sphere-3"></div>
+            <div className="glow"></div>
+            <div className="grid-overlay"></div>
+            <div className="noise-overlay"></div>
+        </div>
+    );
 };
 
 export default ParticlesBackground;
+
